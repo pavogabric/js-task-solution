@@ -27,15 +27,18 @@ body {
 }
 
 h1 {
-    font-size: 22px;
+    font-size: 20px;
+}
+
+h1.gray-bg {
     background-color: rgb(177, 177, 177);
-    padding: 30px 5px;
+    padding: 10px 5px;
 }
 
 .grid-container {
-    margin: 30px auto;
+    margin: 20px auto;
     border: 1px solid black;
-    font-size: 16px;
+    font-size: 14px;
     display: grid;
     grid-template-columns: repeat(10, 1fr);
     grid-template-rows: repeat(10, 1fr);    
@@ -44,7 +47,7 @@ h1 {
 .grid-container span {
     text-align: center;
     cursor: pointer;
-    padding: 15px 5px;
+    padding: 10px 5px;
     font-weight: bold;
     border: 1px solid black;
 }
@@ -57,20 +60,33 @@ h1 {
     background-color: rgb(0, 230, 0);
 }
 
-.accent {
+.info {
     background-color: rgb(2, 123, 204);
-    padding: 30px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0px;
     text-align: center;
     color: white;
-    font-size: 26px;
 }
 
 @media only screen and (min-width: 420px) {
     .grid-container {
-        font-size: 18px;
+        font-size: 16px;
     }
 }
-@media only screen and (min-width: 600px) {
+
+@media only screen and (min-width: 820px) {
+    .grid-container {
+        font-size: 18px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+}
+
+@media only screen and (min-width: 960px) {
     .grid-container {
         font-size: 20px;
     }
@@ -78,19 +94,7 @@ h1 {
     h1 {
         font-size: 24px;
     }
-    .accent {
-        font-size: 28px;
-    }
-}
-
-@media only screen and (min-width: 820px) {
-    .grid-container {
-        font-size: 22px;
-    }
-    h1 {
-        font-size: 26px;
-    }
     .grid-container span {
-        padding: 20px 10px;
+        padding: 15px 10px;
     }
 }

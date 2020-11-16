@@ -7,6 +7,7 @@ const makeGrid = () => {
     for(let i=1; i < 101; i++) {
         let item = `${i}`
         let gridItem = document.createElement('span');
+        gridItem.classList.add('item');
         gridItem.classList.add(`item-${i}`);
         gridItem.innerHTML = item;
         gridContainer.appendChild(gridItem);
@@ -39,7 +40,7 @@ const selectNumber = (e) => {
 
 // Dodjeljujemo svakom broju funkciju selectNumber() koja se aktivira klikom
 
-const items = document.getElementsByTagName('span');
+const items = document.getElementsByClassName('item');
 
     for(let i=0; i < items.length; i++) {
         items[i].addEventListener('click', (e) => {
